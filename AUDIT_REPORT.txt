@@ -1,0 +1,101 @@
+LAPORAN AUDIT ULANG WEBSITE — GIRAN RESIDENCE HOLTEKAMP
+Tanggal: 7 Oktober 2026
+Scope: hanya poin audit manual pengguna pada revisi terbaru.
+
+A. HASIL IMPLEMENTASI
+
+1) NAVBAR
+PASS — Menu Lokasi ditempatkan paling akhir sebelum tombol Hubungi Marketing.
+PASS — Menu Kontak ditambahkan dan ditempatkan tepat sebelum Lokasi.
+PASS — Menu Fasilitas tersedia pada desktop dan mobile.
+PASS — Active-state navbar tetap bekerja menggunakan IntersectionObserver + sinkronisasi posisi scroll.
+PASS — Urutan desktop/mobile identik:
+       Home → Unit → Fasilitas → Legalitas → Galeri → Kontak → Lokasi → Hubungi Marketing.
+
+2) SECTION FASILITAS
+PASS — Section Fasilitas dibuat lebih premium dengan glass card, blur, depth/shadow, hover motion, dan background gambar 1.
+PASS — Konten tidak menambahkan fasilitas kawasan fiktif. Yang digunakan adalah data hunian/spesifikasi yang dapat diverifikasi:
+       2 kamar tidur, 1 kamar mandi, lahan 90 m², bangunan 36 m², keramik 40×40, atap spandek.
+
+3) PILIHAN UNIT
+PASS — Total kartu unit: 3.
+PASS — Styling ketiga kartu konsisten.
+PASS — Ketiga kartu menggunakan gambar 2 yang diberikan pengguna.
+PASS — Karena SiKumbang hanya mencantumkan satu tipe terverifikasi, dua kartu tambahan tidak diberi harga/ukuran fiktif.
+       Ketiganya menampilkan Tipe 36/90, Rp240 juta, 2KT, 1KM, dengan ketersediaan dikonfirmasi ke marketing.
+
+4) BACKGROUND WEBSITE
+PASS — Home memakai gambar 1 sebagai background hero.
+PASS — Section Fasilitas memakai gambar 1 sebagai background.
+PASS — Section Kontak memakai gambar 1 sebagai background.
+PASS — Overlay gelap/gradient diterapkan agar teks tetap terbaca dan tampil premium.
+
+5) WHATSAPP
+PASS — Tombol Hubungi Marketing memakai ikon WhatsApp.
+PASS — Tombol pesan pada kartu unit memakai ikon WhatsApp.
+PASS — Tombol konsultasi/legalitas/status memakai ikon WhatsApp.
+PASS — Form konsultasi sekarang menyiapkan pesan dan membuka WhatsApp.
+PASS — Floating action memakai WhatsApp.
+CATATAN — Nomor WhatsApp tidak dicantumkan secara eksplisit pada listing SiKumbang. Tautan WhatsApp memakai nomor telepon pemasaran 081250504842 sesuai instruksi audit; kanal WhatsApp pada nomor tersebut tetap perlu dikonfirmasi.
+
+6) ANIMASI & RESPONSIVE
+PASS — Motion for JavaScript tetap aktif.
+PASS — GSAP + ScrollTrigger tetap aktif.
+PASS — LottieFiles tetap aktif.
+PASS — 3D tilt tetap aktif pada perangkat pointer/fine.
+PASS — prefers-reduced-motion tetap tersedia untuk aksesibilitas.
+PASS — Breakpoint responsive 1050px, 860px, 600px tetap tersedia.
+
+B. AUDIT TEKNIS OTOMATIS
+
+Total pemeriksaan: 49
+PASS: 49
+FAIL: 0
+
+Pemeriksaan mencakup:
+- file inti tersedia;
+- node --check untuk script.js;
+- tidak ada ID HTML duplikat;
+- seluruh target navbar valid;
+- urutan navbar desktop/mobile;
+- active-state navbar;
+- 3 kartu unit;
+- 6 kartu fasilitas;
+- penggunaan gambar 1/2;
+- ikon WhatsApp pada semua aksi pesan/kontak;
+- form WhatsApp;
+- Motion, GSAP/ScrollTrigger, LottieFiles;
+- 3D tilt;
+- reduced motion;
+- breakpoint responsive;
+- aset lokal valid;
+- data terverifikasi utama tetap ada.
+
+C. UJI HTTP LOKAL
+PASS — index.html: HTTP 200
+PASS — styles.css: HTTP 200
+PASS — script.js: HTTP 200
+PASS — assets/images/holtekamp-background.webp: HTTP 200
+PASS — assets/images/unit-modern.webp: HTTP 200
+
+D. CATATAN BROWSER HEADLESS
+Percobaan screenshot Chromium headless pada environment eksekusi tidak selesai karena proses browser terhambat oleh keterbatasan runtime/DBus container. Karena itu laporan ini tidak mengklaim screenshot browser automation yang tidak berhasil. Validasi struktur HTML, CSS/JS, asset path, HTTP lokal, responsive rules, dan integritas ZIP tetap dilakukan.
+
+E. SUMBER DATA FAKTUAL PROYEK
+SiKumbang — Giran Residence Holtekamp
+ID: JAP0420062025T003
+URL: https://sikumbang.tapera.go.id/lokasi-perumahan/JAP0420062025T003
+
+Data publik yang dipertahankan:
+- PT Giran Bumi Sejahtera
+- APPERNAS JAYA
+- 26 unit subsidi
+- 2 unit tercatat terjual
+- Tipe 36/90
+- Harga Rp240.000.000
+- 2 kamar tidur
+- 1 kamar mandi
+- Holtekamp, Muara Tami, Kota Jayapura
+
+KESIMPULAN
+Seluruh poin audit manual terbaru telah diterapkan tanpa merombak fitur lain di luar scope. Audit teknis menghasilkan 49/49 pemeriksaan PASS.
